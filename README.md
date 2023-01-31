@@ -1,0 +1,1 @@
+The game I have in mind is a Hollownight inspired 2D platformer with a short story that will challenge the player to explore and fight enemies. With an end goal to find all the keys needed to unlock the main gate and destroy the final boss.

@@ -1,1 +1,2 @@
-The game I have in mind is a Hollownight inspired 2D platformer with a short story that will challenge the player to explore and fight enemies. With an end goal to find all the keys needed to unlock the main gate and destroy the final boss.
+The game I have in mind is a story of how the player fell asleep reading the newspaper. Then wakes up to find themself as a paper 2D version of themself trapped in the newspaper. To escape they must make their way through the pages
+and escape.

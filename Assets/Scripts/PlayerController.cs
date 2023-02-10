@@ -66,30 +66,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // private void OnTriggerStay2D(Collider2D other) {
-    //     if (other.CompareTag("Climbable")){
-    //         ClimbLadder();
-    //         animator.SetBool("isClimbing", true);
-    //     }
-    //     else{
-    //         animator.SetBool("isClimbing", false);
-    //     }
-    // }
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.CompareTag("Climbable")){
+            ClimbLadder();
+            animator.SetBool("isClimbing", true);
+        }
+        else{
+            animator.SetBool("isClimbing", false);
+        }
+    }
 
-    // private void ClimbLadder() {
-    //     rb.gravityScale = 0f;
-    //     if (Input.GetKey(KeyCode.W) && !CheckIfPlayerShouldStop(Vector2.up)) {
-    //         transform.position += transform.up * climbingSpeed * Time.deltaTime;
-    //     }
-    //     if (Input.GetKey(KeyCode.S) && !CheckIfPlayerShouldStop(Vector2.down)) {
-    //         transform.position += -transform.up * climbingSpeed * Time.deltaTime;
-    //     }
-    // }
+    private void ClimbLadder() {
+        rb.gravityScale = 0f;
+        if (Input.GetKey(KeyCode.W) && !CheckIfPlayerShouldStop(Vector2.up)) {
+            transform.position += transform.up * climbingSpeed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.S) && !CheckIfPlayerShouldStop(Vector2.down)) {
+            transform.position += -transform.up * climbingSpeed * Time.deltaTime;
+        }
+    }
 
-    // private void OnTriggerExit2D(Collider2D other) {
-    //     rb.gravityScale = gravityScale;
-    //     animator.SetBool("isClimbing", false);
-    // }
+    private void OnTriggerExit2D(Collider2D other) {
+        rb.gravityScale = gravityScale;
+        animator.SetBool("isClimbing", false);
+    }
 
     // private void OnCollisionEnter2D(Collision2D other) {
     //     if (other.collider.CompareTag("Enemy Bullet")) {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Keys : Collectables
 {
+    public int keyCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class Keys : Collectables
     {
         if (other.CompareTag("Player"))
         {
+            keyCount ++;
             DestroyCollectable();
         }
     }

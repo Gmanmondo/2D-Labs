@@ -21,18 +21,31 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float gravityScale;
     private int playerDirection;
+    public float maxHealth = 28f;
+    private float currentHealth = 28f;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         gravityScale = rb.gravityScale;
     }
 
-    private void Update() {
+    private void Update()
+    {
         Walking();
         Jumping();
+
+        currentHealth -= Time.deltaTime;
+        float healthNormalized = currentHealth / maxHealth;
+
+        HealthBar healthBar = HealthBar.GetInstance();
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(healthNormalized);
+        }
     }
 
-    private void Walking() {
+    private void Walking()
+    {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) animator.SetBool("isMoving", true);
         else  animator.SetBool("isMoving", false);
 
@@ -117,7 +130,11 @@ public class PlayerController : MonoBehaviour
         else return false;
     }
 
-    public int ReturnPlayerDirection() {
+    public int ReturnPlayerDirection()
+    {
         return playerDirection;
     }
+
+    //Here is the stuff for player health
+    
 }

@@ -17,17 +17,17 @@ public class Keys : Collectables
         
     }
 
-    protected override void DestroyCollectable()
-    {
-        base.DestroyCollectable();
-    }
+    // protected override void DestroyCollectable()
+    // {
+    //     base.DestroyCollectable();
+    // }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            keyCount ++;
-            DestroyCollectable();
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         keyCount ++;
+    //         DestroyCollectable();
+    //     }
+    // }
 }
